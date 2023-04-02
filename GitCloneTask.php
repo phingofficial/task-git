@@ -1,4 +1,5 @@
 <?php
+
 /**
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
  * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
@@ -17,7 +18,7 @@
  * <http://phing.info>.
  */
 
-namespace Phing\Task\Ext;
+namespace Phing\Task\Ext\Git;
 
 use Phing\Exception\BuildException;
 use Phing\Project;
@@ -81,7 +82,7 @@ class GitCloneTask extends GitBaseTask
         }
 
         $files = @scandir($this->getTargetPath());
-        if (isset($files) && is_array($files) && (count($files) > 2)) {
+        if (is_array($files) && (count($files) > 2)) {
             throw new BuildException(
                 sprintf(
                     '"%s" target directory is not empty',

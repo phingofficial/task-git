@@ -1,4 +1,5 @@
 <?php
+
 /**
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
  * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
@@ -17,7 +18,7 @@
  * <http://phing.info>.
  */
 
-namespace Phing\Task\Ext;
+namespace Phing\Task\Ext\Git;
 
 use Phing\Task;
 use Phing\Exception\BuildException;
@@ -113,7 +114,7 @@ abstract class GitBaseTask extends Task
 
     /**
      * @param bool $reset
-     * @param null $repository
+     * @param string|null $repository
      * @return null|\VersionControl_Git
      * @throws BuildException
      */

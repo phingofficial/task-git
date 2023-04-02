@@ -1,4 +1,5 @@
 <?php
+
 /**
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
  * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
@@ -17,7 +18,7 @@
  * <http://phing.info>.
  */
 
-namespace Phing\Task\Ext;
+namespace Phing\Task\Ext\Git;
 
 use Phing\Exception\BuildException;
 use Phing\Project;
@@ -32,7 +33,6 @@ use Phing\Project;
  */
 class GitInitTask extends GitBaseTask
 {
-
     /**
      * Whether --bare key should be set for git-init
      *
